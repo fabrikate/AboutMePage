@@ -1,0 +1,73 @@
+/*960 grid format, each column 60px*/
+
+.column_1 {
+	width: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_2 {
+	width: 120px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_3 {
+	width: 180px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_4 {
+	width: 240px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_5 {
+	width: 300px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_6 {
+	width: 360px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_7 {
+	width: 420px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_8 {
+	width: 480px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_9 {
+	width: 540px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_10 {
+	width: 600px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_11 {
+	width: 660px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.column_12 {
+	width: 720px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
