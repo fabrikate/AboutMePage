@@ -8,7 +8,7 @@ function createAboutMeContent(){
 	var aboutMeBullets = [
 	'I was born in Colorado, but grew up in the greater Seattle area.',
 	'Claymation has freaked me out since I was a little kid.',
-	'I am a Washington State University Grad (Go Cougs!)',
+	'I am a Washington State University grad (Go Cougs!)',
 	'I have been living in the Boston area for the past 3 years',
 	'You will see some photos/paintings of my cat, Cyrano. He will be on a AFV episode! Date TBD',
 	'Painting is a way for me to relax, I love painting landscapes with watercolor or anything via my computer'
@@ -39,9 +39,26 @@ function generateGalleryImages(){
 		imageNameArray.push(imageName);
 		console.log(imageNameArray)
 	}
+	// *****BUG***** pop pictures using javascript instead of html
 	var getGalleryElement = document.getElementById('galleryImages');
-	var newImg = document.createElement('')
+	var newImg = document.createElement('img')
 }
 generateGalleryImages();
 
 //Set up and update link to code projects section
+
+function generateCodeProjectImages(){
+	var codeProjectImages = ['codeProjectCalc.jpg', 'codeProjectGOT.jpg', 'codeProjectWater.jpg'];
+	// for(i=0; i<codeProjectImages.length)
+	var getCodeHeaderElement = document.getElementById('codeProjectHeader');
+	var headerMsg = 'Code Projects...';
+	getCodeHeaderElement.textContent = headerMsg;
+
+}
+generateCodeProjectImages();
+
+
+
+
+
+
