@@ -30,7 +30,7 @@ span {
 	/*overflow: auto;*/
 }
 
-#gallery {
+#gallery, #galleryPage {
 	margin-top: 150px;
 }
 
@@ -40,11 +40,17 @@ span {
 	margin-right: 10px;
 }
 
-.bodySection {
+.bodySection, .gallerySection {
 	background-color: #422335;
 	border: 8px solid #7E566B;
 	border-radius: 8px;
 	color: #D5F8B4;
+}
+
+.gallerySection {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 ul, li {
@@ -62,18 +68,24 @@ img {
   border: 7px solid white;
   width: 190px;
   height: 170px;
-  margin: 10px;
+  margin: 15px;
 }
 
 img:hover {
-  border: 8px solid white;
+  border: 7px solid white;
   width: 190px;
   height: 170px;
   transform: rotate(10deg);
-  margin: 5px;
+  margin: 15px;
 }
 
-img:nth-child(odd):hover{
-  transform: rotate(-10deg);
-  margin: 5px;
+#galleryButton, #homeButton, #codeProjectsButton {
+	border-radius: 8px;
+	border: solid 3px #8A9A85;
+	padding: 4px 4px;
+}
+
+#galleryButton:hover, #homeButton:hover, #codeProjectsButton:hover {
+	background-color: #C0D6AB;
+	color: #7E566B;
 }
