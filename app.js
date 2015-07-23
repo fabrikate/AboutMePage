@@ -10,12 +10,13 @@ function createAboutMeContent(){
 	'Claymation has freaked me out since I was a little kid.',
 	'I am a Washington State University grad (Go Cougs!)',
 	'I have been living in the Boston area for the past 3 years',
-	'You will see some photos/paintings of my cat, Cyrano. He will be on a AFV episode! Date TBD',
-	'Painting is a way for me to relax, I love painting landscapes with watercolor or anything via my computer'
+	' ',
+	'I have a 7 year-old nephew who I think is amazing.',
+	'I am a Game of Thrones nerd, I read the books too.',
+	'Watercolor painting is a hobby of mine, I have since learned how to pain on a mac.'
 	];
 
 	//Use a loop to append a bullet for each text string
-	// ******BUG TO FIX, br is created but not creating a space between the li elements for readability
 	for(i=0; i<aboutMeBullets.length; i++){
 		var getAboutMeLocation = document.getElementById('contentAboutMe');
 		var newList = document.createElement('li');
@@ -27,38 +28,70 @@ function createAboutMeContent(){
 }
 createAboutMeContent();
 
-//Set up and update gallery section
-
-function generateGalleryImages(){
-	var numImages = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-	var imageNameArray = [];
-	var image = 'Image';
-	for(i=0; i< numImages.length; i++){
-		var imageName = image+numImages[i]+'.jpg';
-		console.log(imageName);
-		imageNameArray.push(imageName);
-		console.log(imageNameArray)
-	}
-	// *****BUG***** pop pictures using javascript instead of html
-	var getGalleryElement = document.getElementById('galleryImages');
-	var newImg = document.createElement('img')
-}
-generateGalleryImages();
-
-//Set up and update link to code projects section
-
+// Write code that feeds images from JavaScript
 function generateCodeProjectImages(){
-	var codeProjectImages = ['codeProjectCalc.jpg', 'codeProjectGOT.jpg', 'codeProjectWater.jpg'];
-	// for(i=0; i<codeProjectImages.length)
-	var getCodeHeaderElement = document.getElementById('codeProjectHeader');
-	var headerMsg = 'Code Projects...';
-	getCodeHeaderElement.textContent = headerMsg;
+	//Set Header
+	var h2element = document.getElementById('codeProjectHeader');
+	var codeProjectHeader = 'Code Projects...';
+	h2element.textContent = codeProjectHeader;
+
+	// Declare an array with the 3 fileNames
+	var codeProjectCollection = ['codeProjectCalc.jpg', 'codeProjectGOT.jpg', 'codeProjectWater.jpg'];
+
+	$('#codeProject0').attr('src', codeProjectCollection[0]);
+	$('#codeProject1').attr('src', codeProjectCollection[1]);
+	$('#codeProject2').attr('src', codeProjectCollection[2]);
 
 }
 generateCodeProjectImages();
 
+//Create a function to generate the Gallery thumbnails and header
+function generateGalleryThumbNail(){
+	//create an empty array to push the file names into
+	var imageCollection = [];
+	for(var j=0; j < 16; j++){
+		var imageFileName = 'Image' + j + '.jpg';
+		imageCollection.push(imageFileName);
 
+		//Use jQuery to feed file names to the document.
+		$('#galleryImg0').attr('src', imageCollection[0]);
+		$('#galleryImg1').attr('src', imageCollection[1]);
+		$('#galleryImg2').attr('src', imageCollection[2]);
+		$('#galleryImg3').attr('src', imageCollection[3]);
+		$('#galleryImg4').attr('src', imageCollection[4]);
+		$('#galleryImg5').attr('src', imageCollection[15]);
+	};
+}
+generateGalleryThumbNail();
 
+// Use jQuery to disolve between the home page content and the gallery content.
+function navigationBar() {
+	$('#galleryPage').hide();
+}
+navigationBar();
 
+$('#galleryButton').on('click', function(){
+	$('#galleryPage').fadeIn(1000);
+	$('#homePage').fadeOut();
+})
 
+$('#homeButton').on('click', function(){
+	$('#homePage').fadeIn(1000);
+	$('#galleryPage').fadeOut();
+})
+
+// Use jQuery to load code goals page
+// function codeProject() {
+// 	$('#codeProjectsButton').on('click', funtion (){
+// 		$('#testLoad').load('codeProjects.html');
+// 	})
+// }
+// codeProject()
+function testFunction(){
+	window.location.href = 'codeProjects.html';
+}
+
+function goHome(){
+	window.location.href = 'index.html';
+}
 
