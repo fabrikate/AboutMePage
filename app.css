@@ -14,6 +14,7 @@ span {
 }
 #navBar {
 	background-color: #D5F8B4;
+	z-index: 75;
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -23,7 +24,7 @@ span {
 }
 
 #aboutMe {
-	margin-top: 150px;
+	margin-top: 170px;
 	margin-left: 10px;
 	width: 35%;
 	float: left;
@@ -31,13 +32,17 @@ span {
 }
 
 #gallery, #galleryPage {
-	margin-top: 150px;
+	margin-top: 170px;
 }
 
 #gallery, #codeProjects {
 	width: 60%;
 	float: right;
 	margin-right: 10px;
+}
+
+#codeProjects {
+	margin-top: 10px;
 }
 
 .bodySection, .gallerySection {
@@ -79,13 +84,33 @@ img:hover {
   margin: 15px;
 }
 
-#galleryButton, #homeButton, #codeProjectsButton {
+input, #galleryButton, #homeButton, #codeProjectsButton {
 	border-radius: 8px;
 	border: solid 3px #8A9A85;
 	padding: 4px 4px;
 }
 
-#galleryButton:hover, #homeButton:hover, #codeProjectsButton:hover {
+input:hover, #galleryButton:hover, #homeButton:hover, #codeProjectsButton:hover {
 	background-color: #C0D6AB;
 	color: #7E566B;
+}
+
+#galleryPageImg:hover {
+	z-index: 50;
+	transform: rotate(0deg);
+	border: 7px solid #D5F8B4;
+}
+
+input {
+	background-color: #D5F8B4;
+}
+
+#careerGoals {
+	margin-top: 170px;
+}
+
+#TinaFeyGif {
+	transform: rotate(0px);
+	width: 300px;
+	height: 200px;
 }
