@@ -11,18 +11,41 @@
 	<title>Fabrikate | Code Goals</title>
 </head>
 <body>
+	<!-- Navigation Bar -->
 	<section id="navBar">
 		<h1>Kate Stearns</h1>
-		<input id='homeInputBtn' type='button' value='Home' onclick='return goHome()' />
-		<span id='galleryButton'>Gallery</span>
-		<span id='codeProjectsButton'>Code Projects</span>
+		<span id='cpHomeButton'><a href="index.html">Home</a></span>
+		<span id='cpGalleryButton'><a href="index.html">Gallery</a></span>
+		<span id='cpCodeProjects'>Code Projects</span>
 	</section>
-	<section id="careerGoals" class="bodySection">
-		<p id="startingCodeCareer"></p>
+	<!-- Goals -->
+	<section id="codeGoals" class="bodySection">
+		<h2 id='codeGoalsHeader'> </h2>
+		<ul id='codeGoalsList'>
+		</ul>
+	</section>
+	<!-- How I feel about code -->
+	<section id="feelCode" class="bodySection">
+		<h2 id="startingCodeCareer"></h2>
 		<img id="TinaFeyGif" src="TinaFeyExcited.gif" alt="animated 30Rock GIF">
 
 	</section>
 
-<script type="text/javascript" src="app.js"></script>
+	<!-- Code Projects -->
+	<section id="showCodeProject" class='bodySection'>
+		<h2 id='codeProjectsHeader'></h2>
+		<table>
+			<tr id="projectGOT">
+				<td></td>
+			</tr>
+			<tr id="projectWater">
+				<td></td>
+			</tr>
+		</table>
+
+	</section>
+
+<!-- <script type="text/javascript" src="app.js"></script> -->
+<script type="text/javascript" src="codeProjectPage.js"></script>
 </body>
 </html>
