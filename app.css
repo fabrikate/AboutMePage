@@ -23,7 +23,7 @@ span {
 	width: 100%;
 }
 
-#aboutMe {
+#aboutMe, #codeGoals {
 	margin-top: 170px;
 	margin-left: 10px;
 	width: 35%;
@@ -31,17 +31,17 @@ span {
 	/*overflow: auto;*/
 }
 
-#gallery, #galleryPage {
+#gallery, #galleryPage, #feelCode {
 	margin-top: 170px;
 }
 
-#gallery, #codeProjects {
+#gallery, #codeProjects, #showCodeProject, #feelCode {
 	width: 60%;
 	float: right;
 	margin-right: 10px;
 }
 
-#codeProjects {
+#codeProjects, #showCodeProject {
 	margin-top: 10px;
 }
 
@@ -84,33 +84,36 @@ img:hover {
   margin: 15px;
 }
 
-input, #galleryButton, #homeButton, #codeProjectsButton {
+#cpHomeButton, #cpGalleryButton, #cpCodeProjects, #galleryButton, #homeButton, #codeProjectsButton {
 	border-radius: 8px;
 	border: solid 3px #8A9A85;
 	padding: 4px 4px;
 }
 
-input:hover, #galleryButton:hover, #homeButton:hover, #codeProjectsButton:hover {
+#cpHomeButton:hover, #cpCodeProjects:hover, #cpGalleryButton:hover, #galleryButton:hover, #homeButton:hover, #codeProjectsButton:hover {
 	background-color: #C0D6AB;
 	color: #7E566B;
 }
 
-#galleryPageImg:hover {
+.galleryPageImg:hover {
 	z-index: 50;
 	transform: rotate(0deg);
 	border: 7px solid #D5F8B4;
 }
 
-input {
-	background-color: #D5F8B4;
-}
-
-#careerGoals {
-	margin-top: 170px;
+a {
+	text-decoration: none;
+	color: black;
 }
 
 #TinaFeyGif {
-	transform: rotate(0px);
+	transform: rotate(0deg);
+	width: 450px;
+	height: 350px;
+}
+
+#gotImg, #waterImg {
+	transform: rotate(0deg);
 	width: 300px;
 	height: 200px;
 }

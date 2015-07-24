@@ -1,29 +1,24 @@
+// *** Index.html content***
 //Set up and update about me section with bullets for easy reading.
 function createAboutMeContent(){
 	//Create text for the header
-	var aboutMeHeader = document.getElementById('aboutMeHeader');
-	aboutMeHeader.textContent = 'About Me...';
+	$('#aboutMeHeader').text('About Me...');
 
 	//Create bullet points for the about me section
 	var aboutMeBullets = [
-	'I was born in Colorado, but grew up in the greater Seattle area.',
-	'Claymation has freaked me out since I was a little kid.',
-	'I am a Washington State University grad (Go Cougs!)',
-	'I have been living in the Boston area for the past 3 years',
-	' ',
-	'I have a 7 year-old nephew who I think is amazing.',
+	'Born in Colorado but grew up in Seattle.',
+	'Claymation freaks me out.',
+	'I am a WSU grad (Go Cougs!)',
+	'Before May I lived in Boston for 3 years.',
+	'I have never been kayaking but I want to.',
+	'I have a 7 year-old nephew who introduced me to Minecraft.',
 	'I am a Game of Thrones nerd, I read the books too.',
-	'Watercolor painting is a hobby of mine, I have since learned how to pain on a mac.'
+	'Painting is my favorite relaxing hobby.'
 	];
 
 	//Use a loop to append a bullet for each text string
 	for(i=0; i<aboutMeBullets.length; i++){
-		var getAboutMeLocation = document.getElementById('contentAboutMe');
-		var newList = document.createElement('li');
-		newList.textContent = aboutMeBullets[i];
-		getAboutMeLocation.appendChild(newList);
-		var breakElement = document.createElement('br');
-		newList.appendChild(breakElement);
+		$('#contentAboutMe').append('<li>' + aboutMeBullets[i] + '</li>' + '<br>');
 	}
 }
 createAboutMeContent();
@@ -36,12 +31,10 @@ function generateCodeProjectImages(){
 	h2element.textContent = codeProjectHeader;
 
 	// Declare an array with the 3 fileNames
-	var codeProjectCollection = ['codeProjectCalc.jpg', 'codeProjectGOT.jpg', 'codeProjectWater.jpg'];
+	var codeProjectCollection = ['codeProjectGOT.jpg', 'codeProjectWater.jpg'];
 
 	$('#codeProject0').attr('src', codeProjectCollection[0]);
 	$('#codeProject1').attr('src', codeProjectCollection[1]);
-	$('#codeProject2').attr('src', codeProjectCollection[2]);
-
 }
 generateCodeProjectImages();
 
@@ -64,6 +57,8 @@ function generateGalleryThumbNail(){
 }
 generateGalleryThumbNail();
 
+// *** jQuery / anchor tag navigation between pages
+
 // Use jQuery to disolve between the home page content and the gallery content.
 function navigationBar() {
 	$('#galleryPage').hide();
@@ -74,24 +69,7 @@ $('#galleryButton').on('click', function(){
 	$('#galleryPage').fadeIn(1000);
 	$('#homePage').fadeOut();
 })
-
 $('#homeButton').on('click', function(){
 	$('#homePage').fadeIn(1000);
 	$('#galleryPage').fadeOut();
 })
-
-// Use jQuery to load code goals page
-// function codeProject() {
-// 	$('#codeProjectsButton').on('click', funtion (){
-// 		$('#testLoad').load('codeProjects.html');
-// 	})
-// }
-// codeProject()
-function testFunction(){
-	window.location.href = 'codeProjects.html';
-}
-
-function goHome(){
-	window.location.href = 'index.html';
-}
-
